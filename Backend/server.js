@@ -23,9 +23,5 @@ mongoose
 //Creating middleware
 app.use(express.json()); //middleware function for json files
 app.use(express.urlencoded({ extended: false })); //middleware function for form objects
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "http://task-manager-app.onrender.com"],
-  })
-);
+app.use(cors());
 app.use(taskRouter);
